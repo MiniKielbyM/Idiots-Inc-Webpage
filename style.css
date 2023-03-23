@@ -1,1 +1,137 @@
+:root {
+    --cardinal: #c41e3dff;
+    --burgundy: #7d1128ff;
+    --burgundy2: #a51433;
+    --folly: #ff2c55ff;
+    --chocolate-cosmos: #3c0919ff;
+  --chocolate-cosmos2: #611029;
+    --amaranth: #e2294fff;
+    }
+    
+    h1 {
+        font-family: "PT Mono", monospace;
+        color: var(--amaranth);
+        text-align: center;
+        margin-top: 20px;
+        font-size: 5vw;
+    }
+    
+    h2, h3, h4, h5, h6 {
+        font-family: "Oxygen", sans-serif;
+        color: var(--cardinal);
+    }
+    
+    p {
+        font-family: "Telex", sans-serif;
+        color: var(--folly);
+    }
+    
+    hr {
+        color: var(--burgundy);
+        background: var(--burgundy);
+        border-radius: 1em;
+    }
+    
+    html, body {
+        background: var(--chocolate-cosmos);
+        height: 100%;
+    }
+    
+    .woop {
+        animation: 2s spinO normal 1; 
+    }
+    
+    .woop:hover {
+        animation: 1s spin normal 1;
+    }
+    
+    @keyframes spinO {
+        from {transform: rotate(360deg);}
+        to {transform: rotate(0deg);}
+    }
+    
+    @keyframes spin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
 
+.panelsbsc:hover, .panelsbsc:focus, .panelsbsc:active {
+  box-shadow: 0 0 100px rgb(242 23 23 / 66%);
+}
+.panelsbsc {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  -webkit-transition-duration: 0.3s;
+  transition-property: box-shadow;
+  width: 31.584062196307%;
+  height: 30.075187969925%;
+  position: relative;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  bottom: 100px;
+  text-align: center;
+  background-color: var(--chocolate-cosmos2);
+  border: 5px outset var(--burgundy2);
+  border-radius: 1em;
+}
+
+.default-link{
+  /* all rules required to make the whole div clickable */ 
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  /* this is a fix for IE7-9 */
+  background-color:#ffffff;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  
+  filter: alpha(opacity=0);  
+  opacity:0;  
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--chocolate-cosmos); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #721111; 
+    border-radius: 0.5em;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8c1c1c; 
+  }
+
+  .fade {
+    animation: 2s spinOF normal 1;
+    user-select: none; 
+    opacity: 0;
+}
+
+.fade:hover {
+    animation: 1s spinF normal 1;
+    opacity: 1;
+}
+
+@keyframes spinOF {
+    from {transform: rotate(360deg); opacity: 1;}
+    to {transform: rotate(0deg); opacity: 0;}
+}
+
+@keyframes spinF {
+    from {transform: rotate(0deg); opacity: 0;}
+    to {transform: rotate(360deg); opacity: 1;}
+}
